@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal</title>
+</head>
+<body>
+    <h1>ANIMAL/h1>
+    <table border="1">
+        <!-- Assuming your data has the following columns: A_ID, Status, Birth_Year, S_ID, E_ID, Column6, Column7, Column8 -->
+        <tr>
+            <th>A_ID</th>
+            <th>Status</th>
+            <th>Birth_Year</th>
+            <th>S_ID</th>
+            <th>E_ID</th>
+          
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/home">Back</a>
+</body>
+</html>

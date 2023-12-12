@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Select a Record</h1>
+    <form method="post">
+        <label for="table">Select Table:</label>
+        <select name="table" id="table">
+            {% for table in tables %}
+                <option value="{{ table }}">{{ table }}</option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <label for="primary_key_column">Primary Key Column:</label>
+        <input type="text" name="primary_key_column" id="primary_key_column">
+        <br>
+
+        <label for="primary_key_value">Primary Key Value:</label>
+        <input type="text" name="primary_key_value" id="primary_key_value">
+        <br>
+
+        <input type="submit" value="Select">
+    </form>
+    <a href="/home">Back</a>
+</body>
+</html>

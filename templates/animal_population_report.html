@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Population Report</title>
+</head>
+<body>
+    <h1>Animal Population Report</h1>
+    {% if report_data %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Species Name</th>
+                    <th>Status</th>
+                    <th>Total Animals</th>
+                    <th>Total Food Cost</th>
+                    <th>Total Care Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in report_data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No data found.</p>
+    {% endif %}
+    <a href="/home">Back to Home</a>
+</body>
+</html>

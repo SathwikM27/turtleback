@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Best Revenue Days Report</title>
+</head>
+<body>
+    <h1>Best Revenue Days in {{ month }}/{{ year }}</h1>
+    {% if best_days_data %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Total Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in best_days_data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No data found for the selected period.</p>
+    {% endif %}
+    <a href="/best_revenue_days">Back to Form</a>
+</body>
+</html>

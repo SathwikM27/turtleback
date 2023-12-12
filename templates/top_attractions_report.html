@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Attractions Report</title>
+</head>
+<body>
+    <h1>Top Attractions from {{ start_date }} to {{ end_date }}</h1>
+    {% if top_attractions_data %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>RID</th>
+                    <th>Total Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in top_attractions_data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No data found for the selected period.</p>
+    {% endif %}
+    <a href="/top_attractions">Back to Form</a>
+</body>
+</html>

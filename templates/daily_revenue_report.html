@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Revenue Report for {{ date }}</title>
+</head>
+<body>
+    <h1>Revenue Report for {{ date }}</h1>
+    {% if revenue_data %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Total Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in revenue_data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No revenue data found for this date.</p>
+    {% endif %}
+    <a href="/daily_revenue_report">Back</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Record to Modify</title>
+</head>
+<body>
+    <h1>Select Record to Modify</h1>
+    <form method="post">
+        <label for="table">Select Table:</label>
+        <select name="table" id="table">
+            <option value="">-- select table --</option>
+            <option value="employee">employee</option>
+            <option value="veterinarian">veterinarian</option>
+            <option value="species">species</option>
+            <option value="revenuetype">revenuetype</option>
+            <option value="revenueevents">revenueevents</option>
+            <option value="hourlyrate">hourlyrate</option>
+            <option value="enclosure">enclosure</option>
+            <option value="caresfor">caresfor</option>
+            <option value="building">building</option>
+            <option value="animalcarespecialist">animalcarespecialist</option>
+            <option value="animal">animal</option>
+        </select>
+        <label for="primary_key_column">Primary Key Column:</label>
+        <input type="text" name="primary_key_column" id="primary_key_column">
+        <label for="primary_key_value">Primary Key Value:</label>
+        <input type="text" name="primary_key_value" id="primary_key_value">
+        <input type="submit" value="Select">
+    </form>
+    <a href="/home">Back</a>
+</body>
+</html>

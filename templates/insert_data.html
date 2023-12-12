@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Data into {{ table }}</title>
+</head>
+<body>
+    <h1>Insert Data into {{ table | capitalize }}</h1>
+    <form method="POST">
+        {% if table == 'hourlyrate' %}
+            <!-- Form fields for hourlyrate table -->
+            <input type="text" name="H_ID" placeholder="H_ID">
+            <input type="text" name="RATE" placeholder="RATE">
+        
+        {% elif table == 'revenuetype' %}
+            <!-- Form fields for revenuetype table -->
+            <input type="text" name="RID" placeholder="RID">
+            <input type="text" name="NAME" placeholder="NAME">
+            <input type="text" name="TYPE" placeholder="TYPE">
+            <input type="text" name="PER_DAY" placeholder="PER_DAY">
+            <input type="text" name="ADULT_PRICE" placeholder="ADULT_PRICE">
+            <input type="text" name="SENIOR_PRICE" placeholder="SENIOR_PRICE">
+            <input type="text" name="PRODUCT" placeholder="PRODUCT">
+            <input type="text" name="B_ID" placeholder="B_ID">
+        
+        {% elif table == 'employee' %}
+            <!-- Form fields for employee table -->
+            <input type="text" name="E_ID" placeholder="E_ID">
+            <input type="text" name="Start_date_unformatted" placeholder="Start_date">
+            <input type="text" name="Job_Type" placeholder="Job_Type">
+            <input type="text" name="Mint" placeholder="Mint">
+            <input type="text" name="Last" placeholder="Last">
+            <input type="text" name="Street" placeholder="Street">
+            <input type="text" name="City" placeholder="City">
+            <input type="text" name="State" placeholder="State">
+            <input type="text" name="Zip" placeholder="Zip">
+            <input type="text" name="H_ID" placeholder="H_ID">
+            <input type="text" name="FIRST_NAME" placeholder="FIRST_NAME">
+        
+        {% elif table == 'animal' %}
+            <!-- Form fields for animal table -->
+            <input type="text" name="A_ID" placeholder="A_ID">
+            <input type="text" name="STATUS" placeholder="STATUS">
+            <input type="text" name="BIRTH_YEAR" placeholder="BIRTH_YEAR">
+            <input type="text" name="S_ID" placeholder="S_ID">
+            <input type="text" name="E_ID" placeholder="E_ID">
+            <input type="text" name="B_ID" placeholder="B_ID">
+        
+        {% elif table == 'animalcarespecialist' %}
+            <!-- Form fields for animalcarespecialist table -->
+            <input type="text" name="E_ID" placeholder="E_ID">
+            <input type="text" name="S_ID" placeholder="S_ID">
+        
+        {% elif table == 'revenueevents' %}
+            <!-- Form fields for revenueevents table -->
+            <input type="text" name="R_date_unformatted" placeholder="R_date_unformatted">
+            <input type="text" name="REVENUE" placeholder="REVENUE">
+            <input type="text" name="TICKETS_SOLD" placeholder="TICKETS_SOLD">
+            <input type="text" name="S_ID" placeholder="S_ID">
+            <input type="text" name="RID" placeholder="RID">
+        
+        {% elif table == 'species' %}
+            <!-- Form fields for species table -->
+            <input type="text" name="S_ID" placeholder="S_ID">
+            <input type="text" name="NAME" placeholder="NAME">
+            <input type="text" name="AVERAGE_FOOD_COST" placeholder="AVERAGE_FOOD_COST">
+        
+        {% elif table == 'veterinarian' %}
+            <!-- Form fields for veterinarian table -->
+            <input type="text" name="E_ID" placeholder="E_ID">
+            <input type="text" name="A_ID" placeholder="A_ID">
+        
+        {% elif table == 'building' %}
+            <!-- Form fields for building table -->
+            <input type="text" name="B_ID" placeholder="B_ID">
+            <input type="text" name="NAME" placeholder="NAME">
+            <input type="text" name="TYPE" placeholder="TYPE">
+        {% elif table == 'enclosure' %}
+            <!-- Form fields for enclosure table -->
+            <input type="text" name="EN_ID" placeholder="EN_ID">
+            <input type="text" name="SQFT" placeholder="SQFT">
+            <input type="text" name="B_ID" placeholder="B_ID">
+        {% elif table == 'caresfor' %}
+            <!-- Form fields for caresfor table -->
+            <input type="text" name="E_ID" placeholder="E_ID">
+            <input type="text" name="S_ID" placeholder="S_ID">         
+        {% endif %}
+
+        <input type="submit" value="Submit">
+    </form>
+    <!-- <a href="/select_table">Back</a> -->
+</body>
+</html>

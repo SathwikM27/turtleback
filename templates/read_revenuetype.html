@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> REVENUETYPE</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>REVENUETYPE</h1>
+    <table>
+        <tr>
+            <th> RID</th>
+      <th>  NAME</th>
+ <th>TYPE</th>
+ <th>PER_DAY</th>
+ <th>ADULT_PRICE</th>
+ <th>SENIOR_PRICE</th>
+ <th>PRODUCT</th>
+ <th>B_ID</th>
+            
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+              <td>{{ row[5] }}</td>
+              <td>{{ row[6] }}</td>
+               <td>{{ row[7] }}</td>
+              
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/home">Back to Home</a>
+</body>
+</html>

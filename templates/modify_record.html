@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modify Employee Record</title>
+</head>
+<body>
+    <h1>Modify Employee Record</h1>
+    <form method="post">
+        {% if table == 'employee' %}
+            <label for="E_ID">Employee ID:</label>
+            <input type="text" name="E_ID"><br>
+
+            <label for="start_date_unformatted">Start Date (YYYY-MM-DD):</label>
+            <input type="text" name="start_date_unformatted"><br>
+
+            <label for="JOB_TYPE">Job Type:</label>
+            <input type="text" name="JOB_TYPE"><br>
+
+            <label for="MINT">Mint:</label>
+            <input type="text" name="MINT"><br>
+
+            <label for="LAST">Last Name:</label>
+            <input type="text" name="LAST"><br>
+
+            <label for="STREET">Street:</label>
+            <input type="text" name="STREET"><br>
+
+            <label for="CITY">City:</label>
+            <input type="text" name="CITY"><br>
+
+            <label for="STATE">State:</label>
+            <input type="text" name="STATE"><br>
+
+            <label for="ZIP">Zip Code:</label>
+            <input type="text" name="ZIP"><br>
+
+            <label for="H_ID">H ID:</label>
+            <input type="text" name="H_ID"><br>
+
+            <label for="FIRST_NAME">First Name:</label>
+            <input type="text" name="FIRST_NAME"><br>
+        
+            <input type="submit" value="Update">
+        {% elif table == 'hourlyrate' %}
+            <label for="H_ID">H ID:</label>
+            <input type="text" name="H_ID"><br>
+
+            <label for="RATE">Rate:</label>
+            <input type="text" name="RATE"><br>
+            
+        {% elif table == 'revenuetype' %}
+            <label for="RID">Revenue Type ID:</label>
+            <input type="text" name="RID"><br>
+
+            <label for="NAME">Name:</label>
+            <input type="text" name="NAME"><br>
+
+            <label for="TYPE">Type:</label>
+            <input type="text" name="TYPE"><br>
+
+            <label for="PER_DAY">Per Day:</label>
+            <input type="text" name="PER_DAY"><br>
+
+            <label for="ADULT_PRICE">Adult Price:</label>
+            <input type="text" name="ADULT_PRICE"><br>
+
+            <label for="SENIOR_PRICE">Senior Price:</label>
+            <input type="text" name="SENIOR_PRICE"><br>
+
+            <label for="PRODUCT">Product:</label>
+            <input type="text" name="PRODUCT"><br>
+
+            <label for="B_ID">B ID:</label>
+            <input type="text" name="B_ID"><br>
+        {% elif table == 'animal' %}
+            <label for="STATUS">Status:</label>
+            <input type="text" name="STATUS"><br>
+
+            <label for="BIRTH_YEAR">Birth Year:</label>
+            <input type="text" name="BIRTH_YEAR"><br>
+
+            <label for="S_ID">S ID:</label>
+            <input type="text" name="S_ID"><br>
+
+            <label for="E_ID">E ID:</label>
+            <input type="text" name="E_ID"><br>
+
+            <label for="B_ID">B ID:</label>
+            <input type="text" name="B_ID"><br>
+        {% elif table == 'animalcarespecialist' %}
+            <label for="E_ID">Employee ID:</label>
+            <input type="text" name="E_ID"><br>
+
+            <label for="S_ID">Specialist ID:</label>
+            <input type="text" name="S_ID"><br>
+        {% elif table == 'revenueevents' %}
+            <label for="R_date_unformatted">Revenue Date:</label>
+            <input type="text" name="R_date_unformatted"><br>
+
+            <label for="REVENUE">Revenue:</label>
+            <input type="text" name="REVENUE"><br>
+
+            <label for="TICKETS_SOLD">Tickets Sold:</label>
+            <input type="text" name="TICKETS_SOLD"><br>
+
+            <label for="S_ID">S ID:</label>
+            <input type="text" name="S_ID"><br>
+
+            <label for="RID">Revenue Type ID:</label>
+            <input type="text" name="RID"><br>
+        {% elif table == 'species' %}
+            <label for="S_ID">Species ID:</label>
+            <input type="text" name="S_ID"><br>
+
+            <label for="NAME">Name:</label>
+            <input type="text" name="NAME"><br>
+
+            <label for="AVERAGE_FOOD_COST">Average Food Cost:</label>
+            <input type="text" name="AVERAGE_FOOD_COST"><br>
+        {% elif table == 'veterinarian' %}
+            <label for="E_ID">Employee ID:</label>
+            <input type="text" name="E_ID"><br>
+
+            <label for="A_ID">Animal ID:</label>
+            <input type="text" name="A_ID"><br>
+        {% elif table == 'building' %}
+            <label for="B_ID">Building ID:</label>
+            <input type="text" name="B_ID"><br>
+
+            <label for="NAME">Name:</label>
+            <input type="text" name="NAME"><br>
+
+            <label for="TYPE">Type:</label>
+            <input type="text" name="TYPE"><br>
+        {% elif table == 'caresfor' %}
+            <label for="E_ID">Employee ID:</label>
+            <input type="text" name="E_ID"><br>
+
+            <label for="S_ID">Specialist ID:</label>
+            <input type="text" name="S_ID"><br>
+            </form>
+        {% elif table == 'enclosure' %}
+            <label for="EN_ID">Enclosure ID:</label>
+            <input type="text" name="EN_ID"><br>
+
+            <label for="SQFT">Square Feet:</label>
+            <input type="text" name="SQFT"><br>
+
+            <label for="B_ID">Building ID:</label>
+            <input type="text" name="B_ID"><br>
+        {% endif %}
+        <input type="submit" value="submit">
+    </form>
+    <a href="/select_record_to_modify">Back</a>
+</body>
+</html>

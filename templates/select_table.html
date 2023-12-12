@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Table</title>
+</head>
+<body>
+    <h1>Select a Table to Insert Data Into</h1>
+    <form action="/insert_data" method="get">
+        <label for="table">Choose a table:</label>
+        <select name="table" id="table">
+            <option value="hourlyrate">Hourly Rate</option>
+            <option value="revenuetype">Revenue Type</option>
+            <option value="employee">Employee</option>
+            <option value="animal">Animal</option>
+            <option value="animalcarespecialist">Animal Care Specialist</option>
+            <option value="building">Building</option>
+            <option value="caresfor">Cares For</option>
+            <option value="enclosure">Enclosure</option>
+            <option value="revenueevents">Revenue Events</option>
+            <option value="species">Species</option>
+            <option value="veterinarian">Veterinarian</option>
+        </select>
+        <input type="submit" value="Select">
+    </form>
+    <a href="/home">Back to Home</a>
+</body>
+</html>

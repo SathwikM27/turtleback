@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VETERINARIAN</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>VETERINARIAN</h1>
+    <table>
+        <tr>
+            <th>E_ID</th>
+            <th>A_ID</th>
+       
+            
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/home">Back to Home</a>
+</body>
+</html>

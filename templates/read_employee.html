@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee </title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee </h1>
+    <table>
+        <tr>
+            <th>E_ID</th>
+            <th>START_DATE</th>
+                   <th>    JOB_TYPE</th>
+                 <th>          MINT</th>
+                 <th>         LAST</th>
+            <th>            STREET</th>
+                 <th>      CITY</th>
+                 <th>       STATE</th>
+                      <th>     ZIP</th>
+                   <th>       H_ID</th>
+          <th>    FIRST_NAME</th>
+       
+            
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+              <td>{{ row[5] }}</td>
+              <td>{{ row[6] }}</td>
+               <td>{{ row[7] }}</td>
+                <td>{{ row[8] }}</td>
+               <td>{{ row[9] }}</td>
+                 <td>{{ row[10] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/home">Back to Home</a>
+</body>
+</html>

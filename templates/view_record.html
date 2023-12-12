@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Record</title>
+</head>
+<body>
+    <h1>Record in {{ table }}</h1>
+    {% if record %}
+        <p>{{ record }}</p>
+    {% else %}
+        <p>No record found.</p>
+    {% endif %}
+    <a href="/home">Back to Home</a>
+</body>
+</html>
